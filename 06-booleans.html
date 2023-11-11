@@ -61,8 +61,12 @@
     const result = 0 ? 'truthy' : 'falsy'
     console.log(result);
 
-    const message = 5 && 'hello';
+    const message = false && 'hello';
     console.log(message);
+
+
+    const currency = 'EUR' || 'USD';
+    console.log(currency);
     </script>
   </body> 
 </html>

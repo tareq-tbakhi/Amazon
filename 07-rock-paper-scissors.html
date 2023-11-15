@@ -26,48 +26,49 @@
 
 
     <button onclick="
-      playGame('Scissor');
+      playGame('Scissors');
       ">Scissors
     </button>
 
 
     
     <script>
-
-     function playGame(playerMove){
+      
+      function playGame(playerMove) {
         const computerMove = pickComputerMove();
-        
+
         let result = '';
-       
-        if(playerMove === 'Scissor'){
-          if(computerMove === 'Rock'){
-          result = 'You lose';
-          }else if(computerMove === 'Paper'){
-          result = 'You win';
-          }else if(computerMove === 'Scissors'){
-          result = 'Tie';
-          }
-        } else if(playerMove === 'Paper'){
-          if (computerMove === 'rock') {
+
+        if (playerMove === 'Scissors') {
+          if (computerMove === 'Rock') {
+            result = 'You lose.';
+          } else if (computerMove === 'Paper') {
             result = 'You win.';
-          } else if (computerMove === 'paper') {
+          } else if (computerMove === 'Scissors') {
             result = 'Tie.';
-          } else if (computerMove === 'scissors') {
+          }
+
+        } else if (playerMove === 'Paper') {
+          if (computerMove === 'Rock') {
+            result = 'You win.';
+          } else if (computerMove === 'Paper') {
+            result = 'Tie.';
+          } else if (computerMove === 'Scissors') {
             result = 'You lose.';
           }
-        } else if(playerMove === 'Rock'){
-          if (computerMove === 'rock') {
+          
+        } else if (playerMove === 'Rock') {
+          if (computerMove === 'Rock') {
             result = 'Tie.';
-          } else if (computerMove === 'paper') {
+          } else if (computerMove === 'Paper') {
             result = 'You lose.';
-          } else if (computerMove === 'scissors') {
+          } else if (computerMove === 'Scissors') {
             result = 'You win.';
           }
         }
 
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}.`);
-     }
-
+        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+      }
       
 
       

@@ -8,14 +8,18 @@
 <body>
   <script>
     const product = {
-      name : 'socks',
+      name : 'socks', 
       price: 1090,
     };
-    console.log(product);
+    console.log(typeof product);
     console.log(product.name);
     console.log(product.price);
 
-    p
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
   </script>
 </body>
 </html>

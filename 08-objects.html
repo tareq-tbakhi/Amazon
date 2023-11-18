@@ -7,6 +7,8 @@
 </head>
 <body>
   <script>
+
+    /*
     const product = {
       name : 'socks', 
       price: 1090,
@@ -20,6 +22,22 @@
 
     product.newProperty = true;
     console.log(product);
+    */
+
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      rating: {
+        stars: 4.5,
+        count: 87
+      }
+      
+    };
+    console.log(product2);
+    console.log(product.name);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
   </script>
 </body>
 </html>

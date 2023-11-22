@@ -7,14 +7,23 @@
 </head>
 <body>
   <script>
-    const product = {
+    const product1 = {
       name: 'basketball',
       price: 2095
     };
 
-    console.log(product);
-    product.price += 500;
-    console.log(product);
+    console.log(product1);
+    product1.price += 500;
+    console.log(product1);
+
+    product1['delivery-time'] = '3 days' ;
+    console.log(product1);
+
+    const product2 = {
+      name: 'football',
+      price: 3095
+    };
+
   </script>
 </body>
 </html>

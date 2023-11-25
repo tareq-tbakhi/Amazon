@@ -20,7 +20,7 @@
   </button>
 
   <script>
-       score = {
+     const score = JSON.parse(localStorage.getItem('score')) || {
         wins : 0,
         losses: 0
       }
@@ -32,9 +32,9 @@
       result === guess ? console.log('You win') : console.log('You lose');
       result === guess ? score.wins +=1 : score.losses +=1;
       console.log(`Wins:${score.wins}, Losses:${score.losses}`);
-      
+      localStorage.setItem('score', JSON.stringify(score));
     }
-
+    
   
   </script>
 </body>

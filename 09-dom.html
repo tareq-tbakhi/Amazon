@@ -7,13 +7,22 @@
     <button>
       hello
     </button>
+    <button class ="js-button">
+      second button
+    </button>
 
     <script>
 
       console.log(document.querySelector('button').innerHTML);
-      console.log(document.querySelector('button').innerHTML = 'changed');
+      
+      console.log(document.querySelector('button')
+        .innerHTML = 'changed');
 
-      /*
+
+      const buttonElement =  document.querySelector('.js-button');
+      console.log(buttonElement);
+         
+      /*  
       console.log(document.title);
       document.title = 'Changed';
 

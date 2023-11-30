@@ -6,23 +6,31 @@
   <title>Document</title>
 </head>
 <body>
-  <input type="text" placeholder="Name"> 
+  <input type="text" placeholder="Name" onkeydown="checkKeydown(event);"> 
   <button onclick="
-  callName();
-  ">
+  callName();" >
     Submit
   </button>
   <p></p>
 
   <script>
 
+    function checkKeydown(event){
+      if(event.key === 'Enter'){
+        callName();
+      }
+    }
+      
     function callName(){
       let name = document.querySelector('input').value;
 
       document.querySelector('p').innerHTML = `Your name is ${name}`;
-
     }
 
+
+ 
+
+  
   </script>
 
 </body>

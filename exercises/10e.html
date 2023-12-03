@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .simple-button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .is-toggled{
+    background-color: black;
+    color: white;
+  }
+
+</style>
+<body>
+  <button class="simple-button" onclick="checkButton(this);">
+    Gaming
+  </button>
+  <button class="simple-button" onclick="checkButton(this);">
+    Music
+  </button>
+  <button class="simple-button" onclick="checkButton(this);">
+    Tech
+  </button>
+</body>
+<script>
+  function checkButton(buttonElement){
+    if(!buttonElement.classList.contains('is-toggled')){
+      buttonElement.classList.add('is-toggled');
+    }else{
+      buttonElement.classList.remove('is-toggled');
+    }
+    
+  }
+</script>
+</html>

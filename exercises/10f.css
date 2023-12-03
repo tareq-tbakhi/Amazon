@@ -1,0 +1,10 @@
+.simple-button{
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.is-toggled{
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    numbers = [1, 20 , 22 , 24, 5];
+    words = ['hi', 'hello', 'good'];
+
+
+    arraySwap(numbers);
+    arraySwap(words);
+
+    function arraySwap(x){
+      [x[0], x[x.length - 1]] = [x[x.length - 1], x[0]];
+      console.log(x); 
+
+    }
+  </script>
+</body>
+</html>

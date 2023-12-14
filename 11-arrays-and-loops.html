@@ -63,7 +63,7 @@
     console.log(value);
    }
    */
-
+/*
    const nums = [1, 1, 3];
    let total = 0;
 
@@ -84,7 +84,89 @@
    }
 
    console.log(numsDoubled);
+*/
 
+   const array1 = [1, 2, 3];
+   const array2 = array1;
+   array2.push(4);
+   console.log(array1);
+   console.log(array2);
+   //so i can see here that arrays are references 
+   //so array2 save the references not the number themselfe
+
+   //is i used a method called .slice() , i can make a copy of the values in the array
+   const array3 = array1.slice();
+   array3.push(5);
+   console.log(array1);
+   console.log(array3);
+
+
+   
+  /*
+    if i want to get the first and the second value of the array i can use index
+   but i can use also a shortcut called destructuring
+   */
+   //const array4 = [1, 2, 3];
+
+
+   const [firstValue, secondValue] = [1, 2, 3];
+   console.log(firstValue);
+   console.log(secondValue);
+   //so this is a shortcut of how i take values and save it in variables
+
+   for(let i = 1; i <= 10; i++){
+    //this is let us skep number 3
+    if(i % 3 === 0 ){
+      continue;
+    }
+    console.log(i);
+    //this is the break feature which let us brake at number 8
+    if(i === 8){
+      break;
+    }
+   }
+
+
+
+   //in while loops, continue will skip the increment step so i have to do it manually before continue 
+   /*
+   while(i <= 10){
+    if(i % 3 === 0){
+      continue
+    }
+    console.log(i);
+    i++;
+   }
+   */
+   let i = 1;
+   while(i <= 10){
+    if( i % 3 === 0){
+      i++;
+      continue;
+    }
+    console.log(i);
+    i++;
+   }
+
+    
+
+
+   function doubleArray(nums){
+    const numsDoubled = [];
+
+    for(let i = 0; i < nums.length; i++){
+      const num = nums[i];
+      if(num === 0){
+        return numsDoubled;
+      }
+      numsDoubled.push(num * 2);
+    }
+
+    return numsDoubled;
+  }
+
+   console.log(doubleArray([1, 1, 3]));
+   console.log(doubleArray([2, 2, 5, 0, 5]));
   </script>
 </body>
 </html>

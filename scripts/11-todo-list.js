@@ -20,18 +20,19 @@ function renderTodoList(){
     //const dueDate = todoObject.dueDate;
     const {name, dueDate} = todoObject;
 
-    const html = 
-    `<p>
-      ${name} ${dueDate} 
-      <button onclick = "
+    const html = `
+    <div> ${name}</div>
+    <div>${dueDate} </div>
+    <button class = "delete-todo-button" onclick = "
       todoList.splice(${i}, 1);
       renderTodoList();
-      ">Delete</button>
-    </p>`; // this is called generating the HTML 
+     ">Delete
+    </button>
+  
+    `; // this is called generating the HTML 
     todoListHTML += html;
   }
 
- console.log(todoListHTML);
 
   document.querySelector('.js-todo-list')
   .innerHTML = todoListHTML;
@@ -40,19 +41,19 @@ function renderTodoList(){
 
 
 function addTodo(){
-  const inputElement = document.querySelector('.js-todo-input')
-  const name = inputElement.value
+  const inputElement = document.querySelector('.js-todo-input');
+  const name = inputElement.value;
 
   const dateInputElement = document.querySelector('.js-due-date-input');
   const dueDate = dateInputElement.value;
+
   todoList.push({
     // name : name,
-    // date : dueDate
+    // date : dueDate 
     // as a shortcut i can make it like this:
     name,
     dueDate
   });
-  console.log(todoList);
 
   inputElement.value = '' ;
 

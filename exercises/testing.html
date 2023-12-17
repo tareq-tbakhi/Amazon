@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/10-rock-paper-scissors.css">
+  </head>
   <body>
-    <script>
-      function removeEgg(foods) {
-        const result = [];
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+      playGame('rock');
+    " class="move-button">
+      <img src="images/rock-emoji.png" class="move-icon">
+    </button>
 
-        for (let i = 0; i < foods.length; i++) {
-          // If the string is 'egg', use continue to skip it.
-          if (foods[i] === 'egg') {
-            continue;
-          }
+    <button onclick="
+      playGame('paper');
+    " class="move-button">
+      <img src="images/paper-emoji.png" class="move-icon">
+    </button>
 
-          // We don't need to have an else here because
-          // the only way to reach this code is if the 
-          // if-statement above is false.
-          result.push(foods[i]);
-        }
+    <button onclick="
+      playGame('scissors');
+    " class="move-button">
+      <img src="images/scissors-emoji.png" class="move-icon">
+    </button>
 
-        return result;
-      }
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
 
-      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
-    </script>
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " class="reset-score-button">Reset Score</button>
+
+    <script src="scripts/10-rock-paper-scissors.js"></script>
   </body>
 </html>

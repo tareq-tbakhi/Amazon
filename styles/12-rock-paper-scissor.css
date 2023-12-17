@@ -1,0 +1,45 @@
+body{
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+.headline{
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 4px;
+}
+.moves-button{
+  height: 110px;
+  width: 110px;
+  background-color: rgb(25, 25, 25);
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  margin-left: 5px;
+  border-radius: 55px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+img{
+  height: 50px;
+}
+.result{
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 35px;
+  margin-left: 5px;
+}
+.moves{
+  margin-bottom: 60px;
+  margin-left: 5px;
+}
+.score{
+  margin-left: 5px;
+}
+.reset-button{
+  padding: 10px 15px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}

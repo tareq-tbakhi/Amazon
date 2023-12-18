@@ -36,7 +36,7 @@ img{
 .score{
   margin-left: 5px;
 }
-.reset-button{
+.reset-button, .auto-play-button{
   padding: 10px 15px;
   background-color: white;
   border: none;

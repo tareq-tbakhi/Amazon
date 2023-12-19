@@ -8,32 +8,27 @@
   </head>
 
   <body>
+
     <p class="headline">
       Rock Paper Scissors
     </p>
 
 
     <button
-      class="moves-button"
-      onclick="
-      playGame('Rock');
-      "><img src="img/rock-emoji.png" alt="">
+      class="moves-button js-rock-button">
+      <img src="img/rock-emoji.png" alt="">
     </button>
 
 
     <button
-      class="moves-button"
-      onclick="
-      playGame('Paper');
-      "><img src="img/paper-emoji.png" alt="">
+      class="moves-button js-paper-button">
+      <img src="img/paper-emoji.png" alt="">
     </button>
 
 
     <button 
-      class="moves-button"
-      onclick="
-      playGame('Scissors');
-      "><img src="img/scissors-emoji.png" alt="">
+      class="moves-button js-scissors-button">
+      <img src="img/scissors-emoji.png" alt="">
     </button>
 
     <p class = "js-result result"></p>
@@ -42,22 +37,12 @@
 
     <P class = "js-score score"></P>
 
-    <button 
-    class="reset-button"
-    onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    console.log('score reset')
-    updateScoreElement();
-    ">Reset the Score
+    <button class="reset-button js-reset-button">
+      Reset the Score
     </button>
 
 
-    <button class="auto-play-button" onclick="
-    autoPlay();
-    ">
+    <button class="auto-play-button js-autoplay-button">
       Auto Play
     </button>
 

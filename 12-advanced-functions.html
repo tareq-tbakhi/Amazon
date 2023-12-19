@@ -6,7 +6,27 @@
   <title>advanced functions</title>
 </head>
 <body>
+
+  <button onclick="" class="js-button">
+    Click
+  </button>
   <script>
+
+    const buttonElement = document.querySelector('.js-button');
+
+    buttonElement.addEventListener('click', () => {
+      console.log('click');
+    });
+
+    const eventListener = () => {
+      console.log('click2');
+    };
+
+    buttonElement.addEventListener('click', eventListener);
+
+    buttonElement.removeEventListener('click', eventListener);
+
+
    /*
    function greeting(){
     console.log('Hello');
@@ -65,12 +85,13 @@
    console.log('next line2');
 */ 
 
+/*
 
    [
     'make dinner',
     'wash dishes',
     'watch youtube'
-   ].forEach(function(value, index){
+   ].forEach((value, index) => {
 
     if(value === 'wash dishes'){
       return;
@@ -79,6 +100,42 @@
     console.log(index);
     console.log(value);
    });
+
+   const regularFunction = function(){
+    console.log('hello');
+   }
+
+
+   const arrowFunction = () => {
+    console.log('hello');
+   };
+
+   arrowFunction();
+
+
+   const oneParam = param => {
+    console.log(param + 1);
+   };
+
+   oneParam(2);
+
+   const oneLine = () => 2 + 3;
+   console.log(oneLine());
+   
+
+   const object2 = {
+    method: () => {
+
+    },
+
+    method() {
+
+    }
+
+   }
+
+*/
+
   </script>
 </body>
 </html>
